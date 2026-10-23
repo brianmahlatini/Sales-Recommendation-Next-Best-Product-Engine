@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
+    "dev": "node ./node_modules/vite/bin/vite.js --host 0.0.0.0 --config vite.config.mjs --configLoader native",
     "build": "node ./node_modules/typescript/bin/tsc && node ./node_modules/vite/bin/vite.js build --config vite.config.mjs --configLoader native",
-    "preview": "vite preview --host 0.0.0.0"
+    "preview": "node ./node_modules/vite/bin/vite.js preview --host 0.0.0.0 --config vite.config.mjs --configLoader native"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
