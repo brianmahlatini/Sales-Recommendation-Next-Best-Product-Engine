@@ -1,0 +1,66 @@
+{
+  "dataset": {
+    "rows": 12960,
+    "positive_rate": 0.043,
+    "customers": 180,
+    "products": 72,
+    "target": "target_purchase equals 1 when a customer buys the candidate product in the 45-day label window."
+  },
+  "models": {
+    "RandomForestClassifier baseline": {
+      "roc_auc": 0.6541,
+      "average_precision": 0.1524,
+      "precision": 0.1918,
+      "recall": 0.3022,
+      "f1": 0.2346,
+      "precision_at_5": 0.1663,
+      "recall_at_5": 0.5982,
+      "ndcg_at_5": 0.4473
+    },
+    "GradientBoostingClassifier stronger_model": {
+      "roc_auc": 0.6719,
+      "average_precision": 0.1633,
+      "precision": 0.3611,
+      "recall": 0.0935,
+      "f1": 0.1486,
+      "precision_at_5": 0.1537,
+      "recall_at_5": 0.5316,
+      "ndcg_at_5": 0.431
+    }
+  },
+  "selected_model": "GradientBoostingClassifier stronger_model",
+  "ranking_formula": "0.75 * supervised ML probability + 0.15 * similarity support + 0.10 * normalized business value",
+  "feature_columns": [
+    "customer_age",
+    "customer_ltv",
+    "customer_order_count",
+    "customer_avg_order_value",
+    "customer_discount_sensitivity",
+    "customer_email_engagement",
+    "product_price",
+    "product_margin_pct",
+    "product_rating",
+    "product_popularity",
+    "product_repeat_rate",
+    "product_revenue_share",
+    "prior_product_purchases",
+    "prior_product_quantity",
+    "prior_product_revenue",
+    "days_since_product_purchase",
+    "category_purchase_count",
+    "category_revenue_share",
+    "category_affinity",
+    "browse_views",
+    "browse_add_to_cart",
+    "browse_dwell_seconds",
+    "days_since_browse",
+    "price_fit_score",
+    "item_similarity_score",
+    "business_value_score",
+    "customer_segment",
+    "customer_region",
+    "loyalty_tier",
+    "product_category",
+    "product_brand"
+  ]
+}

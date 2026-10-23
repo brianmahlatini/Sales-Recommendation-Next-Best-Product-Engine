@@ -1,0 +1,15 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+dist/
+build/
+.DS_Store
+*.log
+backend/app/ml/artifacts/*.tmp
+frontend/.vite/
